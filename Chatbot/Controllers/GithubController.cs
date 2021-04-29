@@ -44,12 +44,7 @@ namespace Chatbot.Controllers
                 if (count_repo == 5) break;
             }
 
-            //foreach (var repo in sortByDate.Values)
-            //{
-            //    Console.WriteLine(repo.FullName + ": " + repo.CreatedAt);
-            //}
             return sortByDate.Values;
-           // return listRepos.ElementAtOrDefault(0);
         }
     }
 }
