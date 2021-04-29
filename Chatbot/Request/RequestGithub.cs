@@ -7,6 +7,13 @@ namespace Chatbot.Request
 {
     public class RequestGithub
     {
+        /// <summary>
+        /// Método para obter 5 repositórios do Github
+        /// </summary>
+        /// <param name="termoBusca"></param>
+        /// <returns>
+        /// Uma lista de repositórios
+        /// </returns>
         public async Task<IList<Repository>> getRepository(string termoBusca)
         {
             var github = new GitHubClient(new ProductHeaderValue("ChatBot"));

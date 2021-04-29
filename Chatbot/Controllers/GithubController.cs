@@ -12,6 +12,14 @@ namespace Chatbot.Controllers
     {
         JsonDocumentMessageSend envio = new JsonDocumentMessageSend();
         RequestGithub request = new RequestGithub();
+
+        /// <summary>
+        /// Obtém os repositórios filtrados pelo termo de busca
+        /// </summary>
+        /// <param name="termoBusca"></param>
+        /// <returns>
+        /// Uma lista com todos os repositórios em um Objeto JSON
+        /// </returns>
         [HttpGet]
         [Route("description/{termoBusca}")]
         public async Task<JsonDocument> getDescription(string termoBusca)
@@ -20,6 +28,13 @@ namespace Chatbot.Controllers
             var document = envio.getDescription(repositories);
             return document;
         }
+        /// <summary>
+        /// Obtém os nomes completos dos repositórios filtrados pelo termo de busca
+        /// </summary>
+        /// <param name="termoBusca"></param>
+        /// <returns>
+        /// Uma lista com todos os nomes completos dos repositórios em um Objeto JSON
+        /// </returns>
         [HttpGet]
         [Route("fullName/{termoBusca}")]
         public async Task<JsonDocument> getFullName(string termoBusca)
